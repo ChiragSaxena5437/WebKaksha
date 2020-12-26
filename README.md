@@ -1,8 +1,8 @@
 # Virtual Classroom Platform
 
 
-
-Follow the following commands in your cmd to checkout this primitive auth system: forswingle users 
+## Steps to setup
+Follow the following commands in your terminal to checkout this primitive auth system for single users 
 ```
 $ trydjango\Scripts\activate
 ```
