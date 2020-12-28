@@ -1,0 +1,13 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h1>WebKaksha Home</h1>
+  <p>Welcome to WebKaksha,</p>
+  <h2>Dynamic content</h2>
+  <p>Currently the website hashas the following record counts:</p>
+  <ul>
+    <li><strong>No. of students:</strong> {{ num_stu }}</li>
+    <li><strong>Num of student instances:</strong> {{ num_instances }}</li>
+    <li><strong>Teachers</strong> {{  num_Teacher }}</li>
+  </ul>
+{% endblock %}
