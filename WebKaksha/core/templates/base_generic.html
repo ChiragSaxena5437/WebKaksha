@@ -13,17 +13,38 @@
 
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light mb-4">
-      <div class="container">
+      <div class="container" style="padding: 20px;" >
         <a class="navbar-brand" href="{% url 'index' %}">WebKaksha</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent" >
+          <ul class="navbar-nav mr-auto" >
             <li class="nav-item">
               <li><a  href="{% url 'index' %}">Home</a></li>
-              <li><a href="{% url 'Students'%}">All students</a></li>
-              <li><a href="">All Teachers</a>
+              
+
+
+                <div class="dropdown">
+                  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Are you a Student??
+                  <span class="caret"></span></button>
+                  <ul class="dropdown-menu">
+                    <li><a href="http://127.0.0.1:8000/home/accounts/login/">Login</a></li>
+                    <li><a href="http://127.0.0.1:8000/home/accounts/sign_up/">Sign Up</a></li>
+                   
+                  </ul>
+                </div>
+
+                <div class="dropdown">
+                  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Are you a Teacher??
+                  <span class="caret"></span></button>
+                  <ul class="dropdown-menu">
+                    <li><a href="http://127.0.0.1:8000/home/accounts/login/">Login</a></li>
+                    <li><a href="http://127.0.0.1:8000/home/accounts/sign_up/">Sign Up</a></li>
+                   
+                  </ul>
+                </div>
+
             </li>
             
           </ul>
@@ -31,6 +52,7 @@
         </div>
       </div>
     </nav>
+    
   
     <div class="container">
       {% block content %}

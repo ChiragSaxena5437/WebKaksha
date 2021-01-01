@@ -3,6 +3,9 @@ from django.views import generic
 from django.http import HttpResponse
 from django.http import Http404
 
+from .models import Student
+from .forms import MyForm
+
 
 
 from .models import Student,StudentInstance,Teacher, stu_class
@@ -43,3 +46,12 @@ def StudentDetailView(request, primary_key):
         raise Http404('Book does not exist')
 
     return render(request, 'core/Student_detail.html', context={'Student': Student_1})
+
+def my_form(request):
+  if request.method == "POST":
+    form = MyForm(request.POST)
+    if form.is_valid():
+      form.save()
+  else:
+      form = MyForm()
+  return render(request, 'cv-form.html', {'form': form})

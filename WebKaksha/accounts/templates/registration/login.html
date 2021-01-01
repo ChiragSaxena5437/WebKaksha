@@ -1,0 +1,22 @@
+<h1>Login to WebKaksha!!</h1>
+
+<!--
+<form method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" value="Login">
+</form>
+-->
+1/2
+<form action="" method="POST">
+    {% csrf_token %}
+    {% if error %}
+    {{ error }}
+    {% endif %}
+    {{ form.as_p }}
+    
+    
+    <input type="hidden" name="next" value="{{ request.GET.next }}"/>
+    <input type="submit" name="submit" value="Log in"/>
+    </form>
+    

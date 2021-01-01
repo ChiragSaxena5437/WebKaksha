@@ -1,0 +1,9 @@
+<h1>Sign up to WebKaksha!!</h1>
+
+<form method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" value="Sign up">
+</form>
+
+or  <a href="href=http://127.0.0.1:8000/home/accounts/login/">Sign Up</a>
